@@ -45,4 +45,15 @@ describe("Customer unit tests", () => {
 
         expect(customer.isActive()).toBe(false);
     });
+
+    it("Should add the customer reward points", () => {
+        let customer = new Customer("123", "Rodrigo");
+        expect(customer.rewardPoints).toBe(0)
+
+        customer.addRewardPoints(10);
+        expect(customer.rewardPoints).toBe(10)
+
+        customer.addRewardPoints(10);
+        expect(customer.rewardPoints).toBe(20)
+    })
 });
