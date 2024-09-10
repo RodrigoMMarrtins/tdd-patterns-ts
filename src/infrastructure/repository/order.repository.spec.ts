@@ -160,27 +160,9 @@ describe("Order repository test", () => {
         const order = new Order("123", "123", [orderItem]);
         const orderRepository = new OrderRepository();
         await orderRepository.create(order);
-        const orderModel = await OrderModel.findOne({
-            where: {
-                id: order.id,
-            },
-            include: ["items"],
-        });
-        expect(orderModel.toJSON()).toStrictEqual({
-            id: "123",
-            customer_id: "123",
-            total: order.total(),
-            items: [
-                {
-                    id: orderItem.id,
-                    name: orderItem.name,
-                    price: orderItem.price,
-                    quantity: orderItem.quantity,
-                    order_id: "123",
-                    product_id: "123",
-                },
-            ],
-        });
+        const orderModel = await orderRepository.find(order.id);
+
+        expect(orderModel).toStrictEqual(order);
     });
 
     it("Should find all orders", async () => {
@@ -199,27 +181,9 @@ describe("Order repository test", () => {
         const orderRepository = new OrderRepository();
         await orderRepository.create(order);
 
-        const orderModel = await OrderModel.findAll({
-            include: ["items"],
-        });
-        const orders = orderModel.map(order => order.toJSON());
+        const orderModel = await orderRepository.findAll();
 
-        expect(orders).toStrictEqual([
-            {
-                id: "123",
-                customer_id: "123",
-                total: order.total(),
-                items: [
-                    {
-                        id: orderItem.id,
-                        name: orderItem.name,
-                        price: orderItem.price,
-                        quantity: orderItem.quantity,
-                        order_id: "123",
-                        product_id: "123",
-                    },
-                ],
-            },
-        ]);
+        expect(orderModel).toHaveLength(1)
+        expect(orderModel).toContainEqual(order);
     });
 });
