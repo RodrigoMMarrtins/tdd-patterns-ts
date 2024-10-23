@@ -1,4 +1,4 @@
-import Product from "../entity/product/product";
+import Product from "../product/entity/product";
 import RepositoryInterface from "./repository-interface";
 
 export default interface ProductRepositoryInterface 

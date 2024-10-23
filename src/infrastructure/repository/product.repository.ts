@@ -1,5 +1,5 @@
 import { where } from "sequelize";
-import Product from "../../domain/entity/product/product";
+import Product from "../../domain/product/entity/product";
 import ProductRepositoryInterface from "../../domain/repository/product-repository.interface";
 import ProductModel from "../db/sequelize/model/product.model";
 
