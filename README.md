@@ -1,19 +1,20 @@
-# TDD Pattern TS: DDD e TDD com JavaScript/TypeScript, Jest e Sequelize
+# TDD Pattern TS: DDD and TDD with JavaScript/TypeScript, Jest, and Sequelize
 
-Este projeto é uma aplicação **Domain-Driven Design (DDD)** desenvolvida com **Test-Driven Development (TDD)**, utilizando **JavaScript**, **TypeScript**, **Jest** para testes unitários e **Sequelize** como ORM para o banco de dados.
+This project is a **Domain-Driven Design (DDD)** application developed using **Test-Driven Development (TDD)**, utilizing **JavaScript**, **TypeScript**, **Jest** for unit testing, and **Sequelize** as the ORM for database management.
 
-## Visão Geral
+## Overview
 
-A arquitetura do projeto é baseada em DDD, separando as responsabilidades de acordo com os domínios de negócio. Cada módulo é projetado para garantir que a lógica de negócio esteja desacoplada das implementações técnicas, promovendo a manutenibilidade e a extensibilidade do sistema.
+The project architecture follows DDD principles, separating responsibilities according to business domains. Each module is designed to ensure that business logic remains decoupled from technical implementations, promoting maintainability and extensibility.
 
-### Recursos Implementados
-- **Configuração de DDD**: estrutura do projeto baseada em entidades, agregados, repositórios e serviços de domínio.
-- **Cobertura de Testes com TDD**: desenvolvimento orientado a testes para assegurar a qualidade e funcionalidade do código.
-- **ORM com Sequelize**: mapeamento de modelos de banco de dados para entidades de domínio.
-- **TypeScript**: proporcionando tipagem estática e maior segurança de tipos no desenvolvimento.
+### Implemented Features
 
-## Tecnologias Utilizadas
+- **DDD Configuration**: Project structure based on entities, aggregates, repositories, and domain services.
+- **Test Coverage with TDD**: Test-driven development ensures code quality and functionality.
+- **ORM with Sequelize**: Database models mapped to domain entities.
+- **TypeScript**: Provides static typing and greater type safety in development.
 
-- **JavaScript e TypeScript**: para desenvolvimento de lógica de aplicação e configuração de tipagem.
-- **Jest**: framework de testes para rodar os testes unitários e garantir qualidade do código.
-- **Sequelize**: ORM para integração com o banco de dados relacional.
+## Technologies Used
+
+- **JavaScript and TypeScript**: For application logic development and type configurations.
+- **Jest**: Testing framework to run unit tests and ensure code quality.
+- **Sequelize**: ORM for integration with the relational database.
